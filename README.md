@@ -1,12 +1,23 @@
-# React + Vite
+# 📊 Attendance Predictor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📚 Project Description
 
-Currently, two official plugins are available:
+Attendance Predictor is a React-based application that helps students track their attendance and predict how many more classes they need to attend to meet the required attendance criteria. By inputting the current number of classes attended, total days of the semester, and other relevant parameters, the application calculates the current attendance percentage and provides insights on whether the student is in the safe zone or danger zone regarding their attendance.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 📥 Input current number of classes attended
+- 📅 Input total days of the semester
+- 📈 Calculate current attendance percentage
+- 🔮 Predict the number of additional classes needed to meet attendance criteria
+- 🚦 Display attendance status (safe zone or danger zone)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚧 Under Construction
+
+This project is currently under construction. Some features may not be fully implemented, and the user interface is subject to change.
+
+
+## 📬 Contact
+
+For any questions or feedback, please contact [paramkhodiyar1008@gmail.com](mailto:paramkhodiyar1008@gmail.com).
+
