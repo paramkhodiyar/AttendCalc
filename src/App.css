@@ -1,0 +1,37 @@
+
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.home.dark-mode {
+  background-color: #000000;
+  color: white;
+}
+.home.dark-mode h1 {
+  color: white;
+}
+  .home.dark-mode p {
+      color: #ccc;
+  }
+
+.container.dark-mode {
+  background-color: #333;
+}

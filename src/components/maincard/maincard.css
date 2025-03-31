@@ -1,0 +1,36 @@
+.ad {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 5vw;
+    box-sizing: content-box;
+    height: 4em;
+    display: flex;
+    align-items: center;
+}
+.ad p{
+    margin-right: 25px;
+}
+
+
+.ad .words {
+    margin-left: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 1.2em;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.ad .words span {
+    display: block;
+    color: #ffc400;
+    animation: text-animation 5s infinite ease-in-out;
+}
+@keyframes text-animation {
+    0%, 20% { transform: translateY(0%); }
+    25%, 45% { transform: translateY(-100%); }
+    50%, 70% { transform: translateY(-200%); }
+    75%, 95% { transform: translateY(-300%); }
+    100% { transform: translateY(-400%); }
+}

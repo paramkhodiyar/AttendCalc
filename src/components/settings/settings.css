@@ -1,0 +1,103 @@
+.settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.btn-cont {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+}
+.options-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background: #333;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover .tooltip {
+    background-color: rgba(255, 255, 255, 0.1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.settings-btn {
+    display: block;
+    transition: transform 0.4s ease-in;
+}
+
+.settings-btn:hover {
+    transform: rotate(60deg);
+}
+
+.settings-btn:active {
+    animation: rot 1s linear infinite;
+}
+
+@keyframes rot {
+    from {
+        transform: rotate(-100deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.option {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+.option:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
