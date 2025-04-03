@@ -10,6 +10,7 @@ function CalcPage({ darkMode }) {
     const [criteria, setCriteria] = useState(75);
     const [showInfo, setShowInfo] = useState(false);
     const [isCalculated, setIsCalculated] = useState(false);
+    const [currcriteria, setCurrCriteria] = useState(75);
     function handleSubmit(e) {
         e.preventDefault();
         const total = parseFloat(e.target[0].value);
@@ -25,6 +26,37 @@ function CalcPage({ darkMode }) {
         setClassesSemester(semester);
         setCriteria(selectedCriteria);
         setIsCalculated(true);
+        setCurrCriteria(selectedCriteria);
+        if (selectedCriteria < 0 || selectedCriteria > 100) {
+            alert("Please enter a valid criteria percentage between 0 and 100.");
+            return;
+        }
+        if (attended > total) {
+            alert("Attended classes cannot exceed total classes.");
+            return;
+        }
+        if (attended < 0) {
+            alert("Attended classes cannot be negative.");
+            return;
+        }
+        if (total < 0) {
+            alert("Total classes cannot be negative.");
+            return;
+        }
+        if (semester < 0) {
+            alert("Semester classes cannot be negative.");
+            return;
+        }
+        if (attended === 0 && total === 0) {
+            setPercentage("0.00");
+        } else if (attended === 0 && total > 0) {
+            setPercentage("0.00");
+        } else if (attended > 0 && total === 0) {
+            setPercentage("Invalid input");
+        } else if (attended > 0 && total > 0) {
+            const calculatedPercentage = (attended / total) * 100;
+            setPercentage(calculatedPercentage.toFixed(2));
+        }
 
         if (total > 0) {
             const calculatedPercentage = (attended / total) * 100;
