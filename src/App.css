@@ -35,3 +35,26 @@ body.dark-mode {
 .container.dark-mode {
   background-color: #333;
 }
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .switch {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+}

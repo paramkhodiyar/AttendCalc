@@ -15,10 +15,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    padding: 15px 20px;
     margin: 0 auto;
 }
-
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -263,3 +267,43 @@ body {
   input:checked + .slider .icon {
     transform: translateX(1.9em);
   }
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 20;
+    color: black;
+  }
+  
+  .dark-mode .hamburger {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 15px;
+      background-color: white;
+      border-radius: 8px;
+      flex-direction: column;
+      width: 200px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 10px 0;
+      z-index: 10;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .dark-mode .nav-links {
+      background-color: #1a1a1a;
+    }
+  }
+  

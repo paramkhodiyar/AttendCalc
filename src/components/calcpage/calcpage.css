@@ -174,9 +174,6 @@ body.dark-mode .analysiscard {
     font-size: 14px;
     z-index: 10;
 }
-
-
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -187,3 +184,69 @@ body.dark-mode .analysiscard {
         transform: translateY(0);
     }
 }
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .card,
+    .analysiscard {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card h2 {
+        font-size: 16px;
+    }
+
+    .tooltip {
+        width: 200px;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .form input,
+    .form select,
+    .form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainpage {
+        padding: 10px;
+    }
+
+    .formcontainer {
+        padding: 15px;
+    }
+
+    .card p,
+    .analysiscard p {
+        font-size: 14px;
+    }
+
+    .info-icon {
+        font-size: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .analysiscard .p-4 {
+        padding: 10px;
+    }
+
+    .text-2xl {
+        font-size: 18px;
+    }
+
+    .text-lg {
+        font-size: 16px;
+    }
+}
+
