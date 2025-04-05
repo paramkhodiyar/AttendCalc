@@ -28,6 +28,7 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     width: 40%;
     word-wrap: normal;
+    background-color: rgb(205, 205, 205);
 }
 
 body.light-mode .mainpage {
@@ -83,11 +84,19 @@ body.dark-mode .card {
 .form button:hover {
     background-color: #0056b3;
 }
-.formcontainer{
-    background-color: #484848;
+.formcontainer {
     border-radius: 16px;
     padding: 25px;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* clean, smooth shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
+
+body.dark-mode .formcontainer {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+}
+
 
 .card h2 {
     margin-top: 15px;

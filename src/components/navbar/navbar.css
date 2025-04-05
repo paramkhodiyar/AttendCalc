@@ -95,6 +95,7 @@ body {
     display: inline-block;
     width: 2.7em;
     height: 0.8em;
+    
 }
    
 .switch input {
@@ -170,14 +171,17 @@ input:checked + .slider .icon {
         flex-direction: column;
         align-items: center;
         position: fixed;
-        top: 80px;
-        left: 0;
-        width: 100%;
+        top: 160px;
+        border-radius: 16px;
+        height: 20vh;
+        bottom: 0;
+        background-color: grey;
+        width: 50%;
         background-color: rgba(255, 255, 255, 0.95);
         padding: 10px 0;
         z-index: 99;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
+      }
   
     .nav-links.show {
         display: flex;
@@ -188,7 +192,9 @@ input:checked + .slider .icon {
         text-align: center;
         width: 100%;
     }
-  
+    .switch{
+        transform: translateY(-79px);
+    }
     .dark-mode .nav-links {
         background-color: rgba(0, 0, 0, 0.95);
     }

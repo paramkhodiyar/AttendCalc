@@ -8,15 +8,15 @@ export default function Navbar({ darkMode, setDarkMode }) {
       <div className="nav-container">
         <div className="logo-menu">
           <h1 className="logo">AttendCalc 🎯</h1>
-          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-            ☰
-          </div>
         </div>
         <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
           <li onClick={() => setMenuOpen(false)}><Link to="/">Home</Link></li>
           <li onClick={() => setMenuOpen(false)}><Link to="/calculator">Calculator</Link></li>
           <li onClick={() => setMenuOpen(false)}><Link to="/settings">Settings</Link></li>
         </ul>
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </div>
         <label className="switch">
           <input
             type="checkbox"
@@ -25,6 +25,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
           />
           <span className="slider"></span>
         </label>
+       
       </div>
     </nav>
   );
