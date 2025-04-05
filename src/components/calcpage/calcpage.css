@@ -27,6 +27,16 @@ body {
     word-wrap: normal;
     background-color: rgb(205, 205, 205);
 }
+.cardheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+.iconholder{
+    transform: translate(10px, -10px);
+}
 
 body.light-mode .mainpage {
     background-color: #f9f9f9;
@@ -234,7 +244,9 @@ body.dark-mode .analysiscard {
     .analysiscard p {
         font-size: 14px;
     }
-
+    .iconholder{
+        display: none;
+    }
     .info-icon {
         font-size: 16px;
     }

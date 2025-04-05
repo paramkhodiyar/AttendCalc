@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { CiCircleInfo } from "react-icons/ci";
+import { FaInfoCircle } from "react-icons/fa";
 import "./calcpage.css";
 import Settings from "../settings/settings";
 
@@ -11,6 +13,13 @@ function CalcPage({ darkMode }) {
     const [showInfo, setShowInfo] = useState(false);
     const [isCalculated, setIsCalculated] = useState(false);
     const [currcriteria, setCurrCriteria] = useState(75);
+    const [infoVisible, setinfoVisible] = useState(false)
+    function show() {
+        setinfoVisible(true);
+    }
+    function hideinfo() {
+        setinfoVisible(false);
+    }
     function handleSubmit(e) {
         e.preventDefault();
         const total = parseFloat(e.target[0].value);
@@ -86,31 +95,55 @@ function CalcPage({ darkMode }) {
             <div className="mainpage">
                 <div className="container">
                     <div className="card">
-                        <h1>Calculator</h1>
+                        <div className="cardheader"><h1>Calculator</h1><div className="iconholder" onMouseEnter={show} onMouseLeave={hideinfo} ><FaInfoCircle style={{ fontWeight: "bolder", cursor: "pointer" }} />
+                            {infoVisible && (
+                                <div
+                                style={{
+                                    position: "absolute",
+                                    bottom: "120%",
+                                    right: "-10px", 
+                                    left:"px",
+                                    backgroundColor: "#333",
+                                    color: "#fff",
+                                    padding: "8px 12px",
+                                    borderRadius: "5px",
+                                    fontSize: "0.85rem",
+                                    whiteSpace: "nowrap",
+                                    boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+                                    zIndex: 999,
+                                    display:"flex",
+                                    flexWrap:"wrap",
+                                    transform:"translateX(380px)"
+                                  }}
+                                >
+                                    The Default classes per day is 3.Customisation coming soon.
+                                </div>
+                            )}
+                        </div></div>
                         <p>Calculate your attendance stats with ease!</p>
-                        <span 
-                                className="info-icon"
-                                onMouseEnter={() => setShowInfo(true)}
-                                onMouseLeave={() => setShowInfo(false)}
-                            >
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    height="14"
-                                    viewBox="0 -960 960 960"
-                                    width="14"
-                                    fill="#e8eaed"
-                                    className="info-icon-svg"
-                                /> 
-                                {showInfo && (
-                                    <div className="tooltip">
-                                        <p><strong>Defaults:</strong></p>
-                                        <p>📌 Classes per day: <strong>3</strong></p>
-                                        <p>📌 Default attendance criteria: <strong>75%</strong></p>
-                                        <p>📌 Attendance is calculated as (Attended/Total) * 100</p>
-                                        <p>📌 No partial attendance is counted</p>
-                                    </div>
-                                )}
-                            </span>
+                        <span
+                            className="info-icon"
+                            onMouseEnter={() => setShowInfo(true)}
+                            onMouseLeave={() => setShowInfo(false)}
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                height="14"
+                                viewBox="0 -960 960 960"
+                                width="14"
+                                fill="#e8eaed"
+                                className="info-icon-svg"
+                            />
+                            {showInfo && (
+                                <div className="tooltip">
+                                    <p><strong>Defaults:</strong></p>
+                                    <p>📌 Classes per day: <strong>3</strong></p>
+                                    <p>📌 Default attendance criteria: <strong>75%</strong></p>
+                                    <p>📌 Attendance is calculated as (Attended/Total) * 100</p>
+                                    <p>📌 No partial attendance is counted</p>
+                                </div>
+                            )}
+                        </span>
                         <div className="formcontainer">
                             <form className="form" onSubmit={handleSubmit}>
                                 <input type="number" placeholder="Classes Total so-far" required />
