@@ -144,7 +144,7 @@ function CalcPage({ darkMode }) {
                                         { title: "Projected Attendance if No Skips", value: `${noskipclasses}%` },
                                         { title: "Classes Needed to Maintain Criteria", value: criteriaClassesToMaintain },
                                         { title: "Classes Needed to Keep Up", value: keepuppercentage },
-                                        { title: "Classes Needed to Maintain 80% Criteria", value: Math.max(0, Math.ceil(((80 / 100) * classesSemester) - classesAttended)) },
+                                        { title: `Classes Needed to Maintain ${criteria} Criteria`, value: Math.max(0, Math.ceil(((80 / 100) * classesSemester) - classesAttended)) },
                                     ].map((item, index) => (
                                         <div key={index} className="p-4 bg-gray-800 text-white rounded-lg shadow-md">
                                             <h3 className="text-lg font-bold">{item.title}</h3>
