@@ -161,7 +161,6 @@ function CalcPage({ darkMode }) {
                         )}
                     </div>
                 </div>
-                <Settings />
             </div>
         </>
     );
