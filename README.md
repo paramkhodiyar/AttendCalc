@@ -11,6 +11,7 @@ Attendance Predictor is a React-based application that helps students track thei
 - 📈 Calculate current attendance percentage
 - 🔮 Predict the number of additional classes needed to meet attendance criteria
 - 🚦 Display attendance status (safe zone or danger zone)
+- Currently, it assumes having 3-Classes per day and gives calculations on the basis of it.
 
 ## 🚧 Under Construction
 
