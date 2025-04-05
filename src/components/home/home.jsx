@@ -14,6 +14,13 @@ function Home({ darkMode }) {
                     <Maincard />
                 </div>
             </div>
+            <div className={`warning ${darkMode ? "dark-mode" : ""}`}>
+                    <p>
+                        ⚠️ <strong>Disclaimer:</strong> This tool is designed solely to help students calculate their attendance percentage.
+                        It does <em>not</em> encourage skipping or leaving classes. Please use it responsibly — regular class attendance
+                        is important for your learning and success.
+                    </p>
+                </div>
         </>
     );
 }

@@ -1,16 +1,17 @@
 .ad {
-    color: rgb(255, 255, 255);
     font-weight: bold;
     font-size: 5vw;
-    box-sizing: content-box;
-    height: 4em;
     display: flex;
+    
     align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
-.ad p{
-    margin-right: 25px;
+.ad.dark-mode .headeranim {
+    color: white; 
 }
-
 
 .ad .words {
     margin-left: 5px;
@@ -20,6 +21,19 @@
     font-size: 1em;
     display: flex;
     flex-direction: column;
+}
+
+.ad .words span {
+    display: block;
+    color: black;
+    animation: text-animation 5s infinite ease-in-out;
+}
+
+.ad.dark-mode .words span {
+    color: white; 
+}
+.ad p{
+    margin-right: 25px;
 }
 
 .ad .words span {
