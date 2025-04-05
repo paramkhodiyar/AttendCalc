@@ -6,11 +6,13 @@ export default function Navbar({ darkMode, setDarkMode }) {
   return (
     <nav className={`navbar ${darkMode ? "dark-mode" : ""}`}>
       <div className="nav-container">
-        <h1 className="logo">AttendCalc 🎯</h1>
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-          ☰
+        <div className="logo-menu">
+          <h1 className="logo">AttendCalc 🎯</h1>
+          <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+            ☰
+          </div>
         </div>
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
+        <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
           <li onClick={() => setMenuOpen(false)}><Link to="/">Home</Link></li>
           <li onClick={() => setMenuOpen(false)}><Link to="/calculator">Calculator</Link></li>
           <li onClick={() => setMenuOpen(false)}><Link to="/settings">Settings</Link></li>

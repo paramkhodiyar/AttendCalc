@@ -168,9 +168,10 @@ body {
     .stylecontainer {
         padding: 15px;
         display: flex;
-        width: 80vw;
+        width: 90vw;
         justify-content: center;
         align-items: center;
+        height: 30vh;
     }
 
     .card1 {
