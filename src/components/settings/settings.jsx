@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./settings.css";
 
-function Settings({darkMode}) {
+
+function Settings({ darkMode }) {
 
     return (
         // <div className="settings">
@@ -28,18 +29,7 @@ function Settings({darkMode}) {
         //         </button>
         //     </div>
         // </div>
-        <div
-            className={`settings ${darkMode ? "darkmode" : ""}`}
-            style={{
-                display: "flex",
-                height: "100vh",
-                justifyContent: "center",
-                alignItems: "center",
-                background: darkMode ? "black" : "white",
-                color: darkMode ? "#ffffff" : "#000000",
-                transition: "background 0.3s ease, color 0.3s ease"
-            }}
-        >
+        <div className={`settings ${darkMode ? "darkmode" : ""}`} style={{ width:"100%",padding:"20px", display:"flex",justifyContent:"center",alignItems:"center",height:"100vh"}}>
             <h1>Coming Soon</h1>
         </div>
     );

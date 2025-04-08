@@ -31,6 +31,7 @@ body {
     margin-left: 15px;
 }
 
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -97,7 +98,19 @@ body {
     height: 0.8em;
     
 }
-   
+/* .linksholder {
+    width: auto;
+    border-radius: 44px;
+    padding: 25px;
+    
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 0, 0.2);
+} */
+
 .switch input {
     display: none;
     opacity: 0;
@@ -172,6 +185,7 @@ input:checked + .slider .icon {
         align-items: center;
         position: fixed;
         top: 160px;
+        right: 120px;
         border-radius: 16px;
         height: 20vh;
         bottom: 0;
