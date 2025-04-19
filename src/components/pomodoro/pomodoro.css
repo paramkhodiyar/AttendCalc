@@ -14,7 +14,7 @@ html {
 }
 .header{
     position: relative;
-    top:4%;
+    top:10%;
     left: 2%;
     display: flex;
     flex-direction: column;
@@ -29,7 +29,7 @@ html {
 .timercontainer {
     display: flex;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 52%;
     transform: translate(-50%, -50%);
     flex-direction: column;
@@ -87,7 +87,7 @@ html {
 
 .quicknotebutton {
     position: absolute;
-    bottom: 20%;
+    bottom: 15%;
     left: 5%;
     background: none;
     border: 1px solid #9065b0;
@@ -141,7 +141,7 @@ html {
 .settings-wrapper {
     position: absolute;
     display: inline-block;
-    bottom: 20%;
+    bottom: 15%;
     right: 5%;
     display: flex;
     flex-direction: column;

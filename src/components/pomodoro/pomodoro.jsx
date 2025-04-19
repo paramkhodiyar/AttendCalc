@@ -19,7 +19,13 @@ function Pomodoro({ darkMode }) {
         ],
         content: '<p>Hey 👋...<p>',
     })
-
+    useEffect(() => {
+        document.body.style.overflowY = "hidden";
+        return () => {
+          document.body.style.overflowY = "auto";
+        };
+      }, []);
+    
     useEffect(() => {
         let timer;
         if (isRunning && timeLeft > 0) {
