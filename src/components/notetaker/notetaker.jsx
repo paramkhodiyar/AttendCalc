@@ -2,7 +2,8 @@ import React from "react";
 import "./notetaker.css";
 import { EditorProvider, EditorContent } from '@tiptap/react';
 import { FaBold, FaItalic, FaStrikethrough, FaCode, FaListUl, FaListOl, FaUndo, FaRedo, FaPalette } from "react-icons/fa";
-import { MdClear } from "react-icons/md";
+import { RiDeleteBin7Fill } from "react-icons/ri";
+import { IoMdDownload } from "react-icons/io";
 import { LuHeading1, LuHeading2, LuHeading3, LuHeading4, LuHeading5, LuHeading6 } from "react-icons/lu";
 import StarterKit from '@tiptap/starter-kit';
 import { Color } from '@tiptap/extension-color';
@@ -142,14 +143,14 @@ const MenuBar = ({ darkMode }) => {
                         className={`clear-button ${darkMode ? 'dark-mode' : ''}`}
                         style={{ backgroundColor: "#ed5e68", display: "flex", justifyContent: "center", alignItems: "center" }}
                     >
-                        Clear
+                        <RiDeleteBin7Fill style={{marginRight:"5px",fontSize:"15px"}}/>Clear
                     </button>
                     <button
                         onClick={downloadfile}
                         className={`download-button ${darkMode ? 'dark-mode' : ''}`}
-                        style={{ backgroundColor: "#a6ff4d", color: "#578723" }}
+                        style={{ backgroundColor: "#a6ff4d", color: "#578723" ,display: "flex", justifyContent: "center", alignItems: "center" }}
                     >
-                        Download
+                        <IoMdDownload style={{marginRight:"5px",fontSize:"15px"}}/>Download
                     </button>
                 </div>
             </div>
@@ -175,7 +176,7 @@ const extensions = [
 function Notetaker({ darkMode }) {
     return (
         <div className={`notetaker-container ${darkMode ? 'dark-mode' : ''}`}>
-            <EditorProvider slotBefore={<MenuBar darkMode={darkMode} />} extensions={extensions} content="Welcome to QuikNotes, Happy Writing !!! (Click on the clear button to reset the page and write)">
+            <EditorProvider slotBefore={<MenuBar darkMode={darkMode} />} extensions={extensions} content="Welcome to Scribl, Happy Writing !!! (Click on the clear button to reset the page and write)">
                 <EditorContent />
             </EditorProvider>
         </div>

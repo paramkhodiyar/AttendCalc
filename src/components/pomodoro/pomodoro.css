@@ -1,0 +1,234 @@
+.maincontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+.timercontainer {
+    display: flex;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #e8defb;
+    color: #9065b0;
+    width: 25%;
+    height: 40%;
+    border-radius: 24px;
+}
+
+.timercontainer.dark-mode {
+    background-color: #46386c;
+    color: #d6b4f2;
+}
+
+.timercontainer button {
+    background: none;
+    border: 1px solid #9065b0;
+    color: #9065b0;
+    padding: 12px;
+    border-radius: 24px;
+}
+
+.timercontainer button:hover {
+    background-color: #9065b0;
+    color: white;
+    cursor: pointer;
+}
+
+.button-group.dark-mode {
+    background: none;
+
+}
+
+.timercontainer.dark-mode button {
+    color: #d6b4f2;
+    border: 1px solid #d6b4f2;
+}
+
+.timercontrols {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.timercontrols.dark-mode {
+    background: none;
+    background-color: #46376c;
+
+
+}
+
+.quicknotebutton {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    background: none;
+    border: 1px solid #9065b0;
+    color: #9065b0;
+    padding: 12px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.quicknotebutton.dark-mode {
+    background-color: #46376c;
+    color: #d6b4f2;
+    border: 1px solid #d6b4f2;
+}
+
+.quicknotebutton:hover {
+    background-color: #9065b0;
+    color: white;
+    cursor: pointer;
+}
+
+.settingsbutton {
+
+    bottom: 20%;
+    right: 5%;
+    background: none;
+    border: 1px solid #9065b0;
+    color: #9065b0;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.settingsbutton button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+
+}
+
+.settingsbutton.dark-mode {
+    background-color: #46376c;
+    color: #d6b4f2;
+    border: 1px solid #d6b4f2;
+}
+
+.settings-wrapper {
+    position: absolute;
+    display: inline-block;
+    bottom: 20%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.settings-menu {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+    margin-bottom: 8px;
+    background-color: #f6f4fa;
+    color: #9065b0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+    min-width: 150px;
+    z-index: 1000;
+}
+.settingscontainer{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.settingscontainer h4{
+    text-align: center;
+}
+
+.settings-menu.dark-mode {
+    background-color: #1e1b26;
+    color: #d6b4f2;
+}
+.settingsbutton:hover {
+    background-color: #9065b0; 
+    color: white;
+    border-color: #9065b0;
+    cursor: pointer;
+}
+
+.settingsbutton.dark-mode:hover {
+    background-color: #d6b4f2; 
+    color: #1e1b26; 
+    border-color: #d6b4f2;
+    cursor: pointer;
+}
+.settings-menu p{
+    padding: 8px;
+    border-radius: 12px;
+    width: auto;
+}
+.settings-menu p:hover {
+    background-color: #e0d8ec; 
+    color: #9065b0; 
+    cursor: pointer;
+}
+
+.settings-menu.dark-mode p:hover {
+    background-color: #372e4a; 
+    color: #d6b4f2; 
+    cursor: pointer;
+}
+.settingsbutton svg {
+    color: #9065b0;
+}
+
+.settingsbutton.dark-mode svg {
+    color: #d6b4f2;
+}
+
+.settingsbutton:hover svg {
+    color: white;
+}
+
+.settingsbutton.dark-mode:hover svg {
+    color: #1e1b26;
+}
+.settingscontainer input {
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: 8px;
+    background-color: rgba(214, 180, 242, 0.7);
+    color: white;
+    margin-top: 10px;
+    border-radius: 12px;
+    padding: 4px 8px;
+    font-size: 16px;
+    width: 70px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+.settingscontainer input::placeholder {
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.settingscontainer input:focus {
+    background-color: rgba(214, 180, 242, 0.9);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}

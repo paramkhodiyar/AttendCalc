@@ -12,10 +12,10 @@ export default function Navbar({ darkMode, setDarkMode }) {
         <div className="linksholder">
           <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
             <li onClick={() => setMenuOpen(false)}><Link to="/">Home</Link></li>
-            <li onClick={() => setMenuOpen(false)}><Link to="/calculator">Calculator</Link></li>
-            <li onClick={() => setMenuOpen(false)}><Link to="/taskmanager">Taskmanager</Link></li>
-            <li onClick={() => setMenuOpen(false)}><Link to="/pomodoro">Pomododoro</Link></li>
-            <li onClick={() => setMenuOpen(false)}><Link to="/notetaker">QuickNotes</Link></li>
+            <li onClick={() => setMenuOpen(false)}><Link to="/calculator">AttendCalc</Link></li>
+            <li onClick={() => setMenuOpen(false)}><Link to="/taskmanager">TaskManager</Link></li>
+            <li onClick={() => setMenuOpen(false)}><Link to="/pomodoro">Pomodoro</Link></li>
+            <li onClick={() => setMenuOpen(false)}><Link to="/notetaker">Scribl</Link></li>
             <li onClick={() => setMenuOpen(false)}><Link to="/settings">Settings</Link></li>
           </ul>
         </div>
