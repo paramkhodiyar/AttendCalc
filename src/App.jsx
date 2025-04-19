@@ -5,6 +5,9 @@ import Navbar from "./components/navbar/navbar";
 import Home from "./components/home/home";
 import CalcPage from "./components/calcpage/calcpage";
 import Settings from "./components/settings/settings";
+import TaskManager from "./components/Taskmanager/taskmanager";
+import Pomodoro from "./components/pomodoro/pomodoro";
+import Notetaker from "./components/notetaker/notetaker";
 
 function App() {
   const [darkMode, setDarkMode] = useState(
@@ -22,8 +25,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home darkMode={darkMode} />} />
         <Route path="/calculator" element={<CalcPage darkMode={darkMode} />} />
+        <Route path="/taskmanager" element={<TaskManager darkMode={darkMode} />} />
+        <Route path="/pomodoro" element={<Pomodoro darkMode={darkMode} />} />
+        <Route path="/notetaker" element={<Notetaker darkMode={darkMode} />} />
         <Route path="/settings" element={<Settings darkMode={darkMode} />} />
         <Route path="*" element={<Navigate to="/" />} />
+      
       </Routes>
     </Router>
   );
