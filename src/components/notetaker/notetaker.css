@@ -1,0 +1,130 @@
+
+.notetaker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+.ProseMirror {
+    background-color: white;
+    width: 210mm;
+    min-height: 297mm;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20mm;
+    box-sizing: border-box;
+    font-size: 12pt;
+    line-height: 1.5;
+}
+
+.notetaker-container.dark-mode {
+    background-color:  #1e1e1e;
+}
+
+.notetaker-container.dark-mode .ProseMirror {
+    background-color: #444;
+    color: #eee;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.control-group {
+    background-color: #1e1e1e;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+.control-group button {
+    background: transparent;
+    border: 1px solid #ccc;
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.control-group button:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.control-group.dark-mode button {
+    background: transparent;
+    border: 1px solid #666;
+    color: #eee;
+}
+
+.control-group.dark-mode button:hover {
+    background-color: #555;
+    border-color: #888;
+}
+
+.control-group.dark-mode {
+    background-color: #555;
+    border-bottom-color: #666;
+}
+
+.control-group .button-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+
+.control-group .button-group .icon-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.control-group .button-group .icon-button:hover {
+    opacity: 1;
+}
+
+.control-group .button-group .icon-button.is-active {
+    color: blue;
+    opacity: 1;
+}
+
+
+.control-group .button-group .text-button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.control-group .button-group .text-button:hover {
+    background-color: #eee;
+}
+
+.control-group.dark-mode .button-group .icon-button {
+    color: #eee;
+}
+
+.control-group.dark-mode .button-group .icon-button.is-active {
+    color: lightblue;
+}
+
+.control-group.dark-mode .button-group .text-button {
+    background-color: #444;
+    color: #eee;
+    border-color: #666;
+}
+
+.control-group.dark-mode .button-group .text-button:hover {
+    background-color: #555;
+}
