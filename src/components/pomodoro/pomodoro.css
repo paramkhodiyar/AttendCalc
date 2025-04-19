@@ -245,3 +245,45 @@ html {
     background-color: rgba(214, 180, 242, 0.9);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
+.quicknote-editor {
+    position: absolute;
+    bottom: calc(20% + 60px);
+    left: 5%;
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 150px;
+    max-height: 200px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.quicknote-editor .ProseMirror {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #ffed95;
+    color: #0a0900;
+    width: auto;
+    min-width: 300px;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    min-height: 120px;
+}
+
+
+.quicknote-editor.dark-mode {
+    background-color: #1e1e2e;
+    color: #d6b4f2;
+    border: 1px solid #d6b4f2;
+}

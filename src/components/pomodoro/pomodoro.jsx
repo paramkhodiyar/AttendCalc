@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import { Color } from '@tiptap/extension-color';
 import { FaPlus } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
 import "./pomodoro.css";
@@ -8,6 +11,14 @@ function Pomodoro({ darkMode }) {
     const [isRunning, setIsRunning] = useState(false);
     const [settings, setSettings] = useState(false);
     const [breakTime, setBreakTime] = useState(5 * 60);
+    const [showQuickNote, setShowQuickNote] = useState(false);
+    const editor = useEditor({
+        extensions: [
+            StarterKit,
+            Color,
+        ],
+        content: '<p>Hey 👋...<p>',
+    })
 
     useEffect(() => {
         let timer;
@@ -84,9 +95,19 @@ function Pomodoro({ darkMode }) {
                     </div>
                 </div>
 
-                <button className={`quicknotebutton ${darkMode ? "dark-mode" : ""}`}>
+                <button
+                    className={`quicknotebutton ${darkMode ? "dark-mode" : ""}`}
+                    onClick={() => setShowQuickNote(!showQuickNote)}
+                >
                     <FaPlus style={{ marginRight: "8px" }} /> Add QuickNote
                 </button>
+                {showQuickNote && (
+                    <div className={`quicknote-editor ${darkMode ? "dark-mode" : ""}`}>
+                        <EditorContent editor={editor} />
+                    </div>
+                )}
+
+
 
                 <div className={`settings-wrapper`}>
                     <div className={`settingsbutton ${darkMode ? "dark-mode" : ""}`}>
@@ -96,7 +117,7 @@ function Pomodoro({ darkMode }) {
                     </div>
                     {settings && (
                         <div className={`settings-menu ${darkMode ? "dark-mode" : ""}`} onClick={(e) => e.stopPropagation()}>
-                            <div className="settingscontainer"> 
+                            <div className="settingscontainer">
                                 <h4>Settings</h4>
                                 <div className="timersettings">
                                     <label>
