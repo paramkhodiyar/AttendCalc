@@ -66,6 +66,10 @@ function Pomodoro({ darkMode }) {
     return (
         <>
             <div className={`maincontainer ${darkMode ? " dark-mode" : ""}`}>
+                <div className={`header ${darkMode ? " dark-mode" : ""}`}>
+                    <h1 className="title">Stay focused. Get things done.</h1>
+                    <h4>Your personal Pomodoro Timer for your focus sessions</h4>
+                </div>
                 <div className={`timercontainer ${darkMode ? " dark-mode" : ""}`}>
                     <div className={`button-group ${darkMode ? " dark-mode" : ""}`}>
                         <button onClick={handleShortBreak}>Short Break</button>

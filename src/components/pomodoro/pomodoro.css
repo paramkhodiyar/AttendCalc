@@ -1,23 +1,36 @@
 .maincontainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     position: relative;
+    overflow-y: hidden;
 
 }
 
 html {
     scroll-behavior: smooth;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
-
+.header{
+    position: relative;
+    top:4%;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: #9065b0;
+}
+.header.dark-mode{
+    color: #e8defb;
+}
 .timercontainer {
     display: flex;
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     flex-direction: column;
     justify-content: center;
@@ -25,7 +38,7 @@ html {
     gap: 20px;
     background-color: #e8defb;
     color: #9065b0;
-    width: 25%;
+    width: 28.7%;
     height: 40%;
     border-radius: 24px;
 }
