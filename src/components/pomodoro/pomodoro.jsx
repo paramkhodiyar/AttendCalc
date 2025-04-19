@@ -12,6 +12,15 @@ function Pomodoro({ darkMode }) {
     const [settings, setSettings] = useState(false);
     const [breakTime, setBreakTime] = useState(5 * 60);
     const [showQuickNote, setShowQuickNote] = useState(false);
+    const [youtubeLink, setYoutubeLink] = useState("");
+    const [videoId, setVideoId] = useState(null);
+
+    function extractVideoId(url) {
+        const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+        const match = url.match(regExp);
+        return match ? match[1] : null;
+    }
+
     const editor = useEditor({
         extensions: [
             StarterKit,
@@ -22,10 +31,10 @@ function Pomodoro({ darkMode }) {
     useEffect(() => {
         document.body.style.overflowY = "hidden";
         return () => {
-          document.body.style.overflowY = "auto";
+            document.body.style.overflowY = "auto";
         };
-      }, []);
-    
+    }, []);
+
     useEffect(() => {
         let timer;
         if (isRunning && timeLeft > 0) {
@@ -86,7 +95,32 @@ function Pomodoro({ darkMode }) {
                 <div className={`header ${darkMode ? " dark-mode" : ""}`}>
                     <h1 className="title">Stay focused. Get things done.</h1>
                     <h4>Your personal Pomodoro Timer for your focus sessions</h4>
+                    {/* <input
+                    type="text"
+                    placeholder="Paste YouTube link here..."
+                    value={youtubeLink}
+                    onChange={(e) => {
+                        const url = e.target.value;
+                        setYoutubeLink(url);
+                        const id = extractVideoId(url);
+                        if (id) setVideoId(id);
+                    }}
+                /> */}
                 </div>
+                
+                {/* {videoId && (
+                    <div className="youtube-player">
+                        <iframe
+                            width="300%"
+                            height="300"
+                            src={`https://www.youtube.com/embed/${videoId}`}
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title="YouTube Video"
+                        ></iframe>
+                    </div>
+                )} */}
                 <div className={`timercontainer ${darkMode ? " dark-mode" : ""}`}>
                     <div className={`button-group ${darkMode ? " dark-mode" : ""}`}>
                         <button onClick={handleShortBreak}>Short Break</button>

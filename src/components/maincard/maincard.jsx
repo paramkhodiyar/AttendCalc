@@ -4,16 +4,16 @@ import './maincard.css';
 const Maincard = () => {
   return (
     <>
-        <div className="ad">
-                <p className='headeranim'>Calculate</p>
-                <div className="words">
-                    <span> Attendance  📊</span>
-                    <span> Days More To Attend 📅</span>
-                    <span> Safe Zone or Danger Zone 🚨</span>
-                    <span> Final Status 🎯</span>
-                    <span> Journey </span>
-                </div>
-            </div>
+      <div className="ad">
+        {/* <p className='headeranim'>Calculate</p> */}
+        <div className="words">
+          <span>📊 Attendance Calculator</span>
+          <span>📝 Your personal Text Editor</span>
+          <span>⏱️ Pomodoro with Quicknotes</span>
+          <span>🎓 YT Lecture Integration</span>
+        </div>
+      </div>
+
     </>
 
   );

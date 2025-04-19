@@ -6,8 +6,8 @@ function Home({ darkMode }) {
     return (
         <>
             <div className={`home ${darkMode ? "dark-mode" : ""}`}>
-                <h1>Welcome to AttendCalc 🎯</h1>
-                <p>Calculate your attendance percentage with ease!</p>
+                <h1>Welcome to StudyBase 🎯</h1>
+                <p>From attendance to to-dos — everything you need to study smarter.</p>
             </div>
             <div className="stylecontainer">
                 <div className="card1">

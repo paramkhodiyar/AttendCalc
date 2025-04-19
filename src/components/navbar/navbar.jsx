@@ -7,7 +7,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
     <nav className={`navbar ${darkMode ? "dark-mode" : ""}`}>
       <div className="nav-container">
         <div className="logo-menu">
-          <h1 className="logo">AttendCalc 🎯</h1>
+          <h1 className="logo">StudyBase 🎯</h1>
         </div>
         <div className="linksholder">
           <ul className={`nav-links ${menuOpen ? "show" : ""}`}>
