@@ -5,7 +5,7 @@ import Navbar from "./components/navbar/navbar";
 import Home from "./components/home/home";
 import CalcPage from "./components/calcpage/calcpage";
 import Settings from "./components/settings/settings";
-import TaskManager from "./components/Taskmanager/taskmanager";
+import TaskManager from "./components/taskmanager/taskmanager";
 import Pomodoro from "./components/pomodoro/pomodoro";
 import Notetaker from "./components/notetaker/notetaker";
 
