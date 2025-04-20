@@ -1,15 +1,19 @@
 .ad {
     font-weight: bold;
-    font-size: 5vw;
+    font-size: 2.5rem;
     display: flex;
-    
     align-items: center;
     justify-content: center;
-    padding: 0;
+    padding: 1rem 0;
     margin: 0;
     width: 100%;
-
+    flex-wrap: wrap;
 }
+
+html, body {
+    overflow-x: hidden;
+}
+
 .ad.dark-mode .headeranim {
     color: white; 
 }
@@ -18,30 +22,29 @@
     margin-left: 5px;
     overflow: hidden;
     position: relative;
-    height: 1.2em;
-    font-size: 1em;
+    top: 30%;
+    height: 1.5em;
     display: flex;
     flex-direction: column;
 }
 
 .ad .words span {
     display: block;
-    color: black;
+    color: #ffc400;
     animation: text-animation 5s infinite ease-in-out;
+    padding: 2px 0;
+    white-space: nowrap;
 }
 
 .ad.dark-mode .words span {
-    color: white; 
-}
-.ad p{
-    margin-right: 25px;
+    color: #ffc400;
 }
 
-.ad .words span {
-    display: block;
-    color: #ffc400;
-    animation: text-animation 5s infinite ease-in-out;
+.ad p {
+    margin-right: 15px;
+    margin-bottom: 0;
 }
+
 @keyframes text-animation {
     0%, 20% { transform: translateY(0%); }
     25%, 45% { transform: translateY(-100%); }
@@ -49,11 +52,29 @@
     75%, 95% { transform: translateY(-300%); }
     100% { transform: translateY(-400%); }
 }
+
+@media (min-width: 1025px) {
+    .ad {
+        font-size: 2.5rem;
+    }
+    
+    .ad .words {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .ad {
+        font-size: 2.2rem;
+    }
+}
+
 @media (max-width: 768px) {
     .ad {
-        font-size: 4.5vw;
+        font-size: 1.8rem;
         flex-direction: column;
         text-align: center;
+        padding: 1rem 0.5rem;
     }
 
     .ad p {
@@ -63,34 +84,39 @@
 
     .ad .words {
         margin-left: 0;
-        height: 1.4em;
+        height: 1.6em;
+        width: 100%;
+        text-align: center;
     }
 }
 
 @media (max-width: 480px) {
     .ad {
-        font-size: 5vw;
-        flex-direction: column;
-        padding: 10px;
+        font-size: 1.5rem;
+        padding: 0.8rem 0.5rem;
     }
 
     .ad p {
-        margin: 0 0 5px 0;
-        font-size: 2.2em;
+        margin: 0 0 8px 0;
     }
-
     
     .ad .words {
-        font-size: 1.25em;
-        height: 1.1em;
+        height: 1.8em;
+        font-size: 1em;
     }
 
     .ad .words span {
-        font-size: 0.95em;
+        animation: text-animation 7s infinite ease-in-out;
+        font-size: 1em;
     }
 }
-@media (max-width: 480px) {
-    .ad .words span {
-        animation: text-animation 7s infinite ease-in-out;
+
+@media (max-width: 320px) {
+    .ad {
+        font-size: 1.2rem;
+    }
+    
+    .ad .words {
+        height: 2em;
     }
 }

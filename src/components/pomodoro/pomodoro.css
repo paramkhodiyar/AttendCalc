@@ -1,3 +1,4 @@
+
 .maincontainer {
     display: flex;
     flex-direction: column;
@@ -5,18 +6,21 @@
     height: 100vh;
     position: relative;
     overflow-y: hidden;
+}
 
-}
 .maincontainer.dark-mode{
-    background-color:#1e1e1e ;
+    background-color:#1e1e1e;
 }
+
 .header.dark-mode{
-    background-color:#1e1e1e ;
+    background-color:#1e1e1e;
 }
+
 html {
     scroll-behavior: smooth;
     /* overflow-y: hidden; */
 }
+
 .header{
     position: relative;
     top:10%;
@@ -28,9 +32,11 @@ html {
     align-items: center;
     color: #9065b0;
 }
+
 .header.dark-mode{
     color: #e8defb;
 }
+
 .timercontainer {
     display: flex;
     position: absolute;
@@ -69,7 +75,6 @@ html {
 
 .button-group.dark-mode {
     background: none;
-
 }
 
 .timercontainer.dark-mode button {
@@ -86,8 +91,6 @@ html {
 .timercontrols.dark-mode {
     background: none;
     background-color: #46376c;
-
-
 }
 
 .quicknotebutton {
@@ -116,7 +119,6 @@ html {
 }
 
 .settingsbutton {
-
     bottom: 20%;
     right: 5%;
     background: none;
@@ -134,7 +136,6 @@ html {
     justify-content: center;
     border: none;
     background: none;
-
 }
 
 .settingsbutton.dark-mode {
@@ -167,12 +168,12 @@ html {
     min-width: 150px;
     z-index: 1000;
 }
+
 .settingscontainer{
     display: flex;
     flex-direction: column;
-
-
 }
+
 .settingscontainer h4{
     text-align: center;
 }
@@ -181,6 +182,7 @@ html {
     background-color: #1e1b26;
     color: #d6b4f2;
 }
+
 .settingsbutton:hover {
     background-color: #9065b0; 
     color: white;
@@ -194,11 +196,13 @@ html {
     border-color: #d6b4f2;
     cursor: pointer;
 }
+
 .settings-menu p{
     padding: 8px;
     border-radius: 12px;
     width: auto;
 }
+
 .settings-menu p:hover {
     background-color: #e0d8ec; 
     color: #9065b0; 
@@ -210,6 +214,7 @@ html {
     color: #d6b4f2; 
     cursor: pointer;
 }
+
 .settingsbutton svg {
     color: #9065b0;
 }
@@ -225,6 +230,7 @@ html {
 .settingsbutton.dark-mode:hover svg {
     color: #1e1b26;
 }
+
 .settingscontainer input {
     background: none;
     outline: none;
@@ -241,6 +247,7 @@ html {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.2s ease;
 }
+
 .settingscontainer input::placeholder {
     color: #ffffff;
     opacity: 0.7;
@@ -250,6 +257,7 @@ html {
     background-color: rgba(214, 180, 242, 0.9);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
+
 .quicknote-editor {
     position: absolute;
     bottom: calc(20% + 60px);
@@ -269,6 +277,7 @@ html {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .quicknote-editor .ProseMirror {
     white-space: pre-wrap;
     word-wrap: break-word;
@@ -286,14 +295,168 @@ html {
     min-height: 120px;
 }
 
-
 .quicknote-editor.dark-mode {
     background-color: #1e1e2e;
     color: #d6b4f2;
     border: 1px solid #d6b4f2;
 }
+
 .youtube-player{
     position: relative;
     top: 10%;
+}
 
+/* Added Media Queries for Responsiveness */
+@media screen and (max-width: 1200px) {
+    .timercontainer {
+        width: 40%;
+        height: 45%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .timercontainer {
+        width: 50%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    
+    .header {
+        top: 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timercontainer {
+        width: 70%;
+        left: 50%;
+    }
+    
+    .quicknote-editor {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 25%;
+    }
+    
+    .quicknote-editor .ProseMirror {
+        min-width: 250px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header h4 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .timercontainer {
+        width: 85%;
+        gap: 15px;
+    }
+    
+    .header {
+        top: 2%;
+        left: 0;
+    }
+    
+    .quicknotebutton {
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .settings-wrapper {
+        bottom: 15%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+    
+    .timercontrols {
+        gap: 15px;
+    }
+    
+    .timercontrols button {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .timercontainer {
+        width: 70%;
+        height: auto;
+        padding: 20px;
+        top: 45%;
+    }
+    
+    .quicknote-editor {
+        max-width: 90%;
+        bottom: 11%;
+        left :25%;
+        transform: translateX(-25%);    
+    }
+    
+    .quicknote-editor .ProseMirror {
+        min-width: auto;
+        width: 100%;
+    }
+    .settings-wrapper{
+        bottom: 5%;
+        right: 15%;
+    }
+    .quicknotebutton{
+        bottom: 5%;
+        left:25%
+    }
+    .settings-menu {
+        
+        right: -50%;
+    }
+    .header h1{
+        font-size: 1.5em;
+    }
+    .header p{
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .header {
+        top: 5%;
+    }
+    
+    .timercontainer {
+        top: 45%;
+        height: auto;
+        padding: 20px 15px;
+    }
+    
+    .quicknotebutton {
+        bottom: 3%;
+    }
+    
+    .settings-wrapper {
+        bottom: 3%;
+    }
+    
+    .quicknote-editor {
+        bottom: 15%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .header {
+        top: 2%;
+    }
+    
+    .timercontainer {
+        gap: 10px;
+    }
+    
+    .timercontainer h1 {
+        margin: 5px 0;
+    }
 }

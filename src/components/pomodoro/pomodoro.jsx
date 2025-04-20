@@ -26,7 +26,7 @@ function Pomodoro({ darkMode }) {
             StarterKit,
             Color,
         ],
-        content: '<p>Hey 👋...<p>',
+        content: '<p>Hey There....<p>',
     })
     useEffect(() => {
         document.body.style.overflowY = "hidden";
@@ -94,7 +94,7 @@ function Pomodoro({ darkMode }) {
             <div className={`maincontainer ${darkMode ? " dark-mode" : ""}`}>
                 <div className={`header ${darkMode ? " dark-mode" : ""}`}>
                     <h1 className="title">Stay focused. Get things done.</h1>
-                    <h4>Your personal Pomodoro Timer for your focus sessions</h4>
+                    <p>Your personal Pomodoro Timer for your focus sessions</p>
                     {/* <input
                     type="text"
                     placeholder="Paste YouTube link here..."
