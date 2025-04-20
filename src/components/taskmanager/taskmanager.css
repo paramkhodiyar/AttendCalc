@@ -1,0 +1,18 @@
+.container{
+    background-color: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.headercontainer{
+    background-color: #3d3d3d;
+    width: 40vw;
+    height: 40vh;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
