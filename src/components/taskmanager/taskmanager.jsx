@@ -3,7 +3,7 @@ import "./taskmanager.css";
 function TaskManager(){
     return(
         <>
-        <div className="container">
+        <div className="taskmanagercontainer">
             <div className="headercontainer">
                 <h1>Task Manager </h1>
                 <h3>🚧 Under Construction 🚧</h3>

@@ -32,8 +32,9 @@ html, body {
     display: block;
     color: #ffc400;
     animation: text-animation 5s infinite ease-in-out;
-    padding: 2px 0;
+    padding: 3px 0;
     white-space: nowrap;
+
 }
 
 .ad.dark-mode .words span {
