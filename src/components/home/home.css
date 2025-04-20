@@ -13,6 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     margin-top: 70px;
+    padding-bottom: 150px;
 }
 
 .home h1 {
@@ -49,7 +50,6 @@ body {
 .stylecontainer {
     border-radius: 12px;
     position: relative;
-    top:30%;
     padding: 15px;
     width: 100%;
     min-height: 200px;
@@ -59,7 +59,7 @@ body {
     align-items: center;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-sizing: border-box;
-    height: 40vh;
+    margin-bottom: 100px;
 }
 
 .stylecontainer.dark-mode {
@@ -84,11 +84,18 @@ body {
     align-items: center;
     padding: 0 15px;
     box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .warning {
     max-width: 600px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 1.5rem 2rem;
     text-align: center;
     border-radius: 12px;
@@ -97,12 +104,7 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-
+    width: 100%;
 }
 
 .warning.dark-mode {
@@ -126,11 +128,13 @@ body {
     .card1 {
         gap: 15px;
     }
-    .ad .words{
+
+    .ad .words {
         font-size: 1.5em;
     }
+
     .warning {
-        width: calc(100% - 40px);
+        width: 100%;
         font-size: 0.95rem;
         padding: 1.2rem;
     }
@@ -147,6 +151,7 @@ body {
 @media (max-width: 768px) {
     .home {
         margin-top: 50px;
+        padding-bottom: 100px;
     }
 
     .home h1 {
@@ -164,13 +169,17 @@ body {
     .features li {
         font-size: 1rem;
     }
-    .ad .words{
+
+    .ad .words {
         font-size: 1em;
     }
+
     .warning {
         font-size: 0.9rem;
-        bottom: 15px;
-        width: 70%;
+    }
+
+    .stylecontainer {
+        margin-bottom: 70px;
     }
 }
 
@@ -178,6 +187,7 @@ body {
     .home {
         margin-top: 40px;
         padding: 10px;
+        padding-bottom: 80px;
     }
 
     .home h1 {
@@ -187,18 +197,16 @@ body {
     .home p {
         font-size: 0.9rem;
     }
-   
+
     .warning {
         padding: 1rem;
         font-size: 0.85rem;
-        /* max-width: calc(100% - 30px); */
-        width: 70%;
-        bottom: 10px;
     }
 
     .stylecontainer {
         padding: 15px;
         min-height: 150px;
+        margin-bottom: 50px;
     }
 
     .card1 {
