@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { MdSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 import "./navbar.css";
 export default function Navbar({ darkMode, setDarkMode }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,15 +24,20 @@ export default function Navbar({ darkMode, setDarkMode }) {
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
             ☰
           </div>
+        <div className="modetoggler">
+          {/* <MdSunny style={{fontSize:"24px"}}/> */}
         <label className="switch">
+
           <input
             type="checkbox"
             checked={darkMode}
             onChange={() => setDarkMode(!darkMode)}
           />
           <span className="slider"></span>
+         
         </label>
-       
+        {/* <FaMoon style={{fontSize:"18px"}}/> */}
+        </div>
       </div>
     </nav>
   );
