@@ -1,11 +1,11 @@
-
 .maincontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     position: relative;
-    overflow-y: hidden;
+    overflow-y: auto;
+    padding-bottom: 50px;
 }
 
 .maincontainer.dark-mode{
@@ -18,40 +18,113 @@
 
 html {
     scroll-behavior: smooth;
-    /* overflow-y: hidden; */
 }
 
 .header{
     position: relative;
-    top:10%;
-    left: 2%;
+    top: 10%;
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
     color: #9065b0;
+    margin-bottom: 30px;
 }
 
 .header.dark-mode{
     color: #e8defb;
 }
+.youtube-input-container {
+    width: 80%;
+    margin: 20px 0;
+    position: relative;
+    top:10%;
+    display: flex;
+    justify-content: center;
+}
 
+.youtube-input-container.dark-mode {
+    color: #e8defb;
+    background-color: #1e1e1e;
+}
+
+.youtube-input-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+}
+
+.youtube-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ff0000;
+    font-size: 24px;
+}
+
+.youtube-input-container input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    border-radius: 30px;
+    border: 2px solid #9065b0;
+    background-color: rgba(232, 222, 251, 0.3);
+    color: #9065b0;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.youtube-input-container input:focus {
+    box-shadow: 0 0 8px rgba(144, 101, 176, 0.6);
+    border-color: #b490d0;
+}
+
+.youtube-input-container.dark-mode input {
+    background-color: rgba(70, 56, 108, 0.3);
+    border-color: #d6b4f2;
+    color: #e8defb;
+}
+
+.youtube-input-container.dark-mode input::placeholder {
+    color: #b490d0;
+}
+
+
+.youtube-player {
+    width: 100%;
+    position: relative;
+    top: 12%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+}
+
+
+.youtube-player iframe {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
 .timercontainer {
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 52%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top:15%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
     background-color: #e8defb;
     color: #9065b0;
-    width: 28.7%;
-    height: 40%;
+    width: 400px;
+    padding: 30px 20px;
     border-radius: 24px;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+.timercontainer.with-video {
+    margin-top: 20px;
 }
 
 .timercontainer.dark-mode {
@@ -94,15 +167,16 @@ html {
 }
 
 .quicknotebutton {
-    position: absolute;
-    bottom: 15%;
-    left: 5%;
+    position: relative;
+    bottom: -30%;
+    left: -40%;
     background: none;
     border: 1px solid #9065b0;
     color: #9065b0;
     padding: 12px;
     border-radius: 24px;
-    display: flex;
+    display: flex
+;
     align-items: center;
 }
 
@@ -119,8 +193,6 @@ html {
 }
 
 .settingsbutton {
-    bottom: 20%;
-    right: 5%;
     background: none;
     border: 1px solid #9065b0;
     color: #9065b0;
@@ -145,10 +217,10 @@ html {
 }
 
 .settings-wrapper {
-    position: absolute;
+    position: relative;
     display: inline-block;
-    bottom: 15%;
-    right: 5%;
+    bottom: -26%;
+    right: -41%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -259,7 +331,7 @@ html {
 }
 
 .quicknote-editor {
-    position: absolute;
+    position: fixed;
     bottom: calc(20% + 60px);
     left: 5%;
     max-width: 300px;
@@ -276,6 +348,7 @@ html {
     word-wrap: break-word;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 1000;
 }
 
 .quicknote-editor .ProseMirror {
@@ -301,35 +374,45 @@ html {
     border: 1px solid #d6b4f2;
 }
 
-.youtube-player{
-    position: relative;
-    top: 10%;
-}
-
-/* Added Media Queries for Responsiveness */
+/* Media Queries */
 @media screen and (max-width: 1200px) {
     .timercontainer {
-        width: 40%;
-        height: 45%;
+        width: 350px;
+    }
+    
+    .youtube-input-wrapper {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 992px) {
     .timercontainer {
-        width: 50%;
-        height: auto;
-        padding: 30px 20px;
+        width: 300px;
+        padding: 25px 15px;
     }
     
     .header {
-        top: 5%;
+        top: 3%;
+    }
+    
+    .youtube-player iframe {
+        height: 380px;
     }
 }
 
 @media screen and (max-width: 768px) {
     .timercontainer {
-        width: 70%;
-        left: 50%;
+        width: 80%;
+        max-width: 400px;
+    }
+    
+    .youtube-input-wrapper {
+        width: 100%;
+    }
+    
+    .youtube-player iframe {
+        width: 90% !important;
+        height: 320px;
     }
     
     .quicknote-editor {
@@ -346,20 +429,23 @@ html {
         font-size: 1.5rem;
     }
     
-    .header h4 {
+    .header p {
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 576px) {
+    .youtube-player iframe {
+        height: 240px;
+    }
+    
     .timercontainer {
-        width: 85%;
+        width: 90%;
         gap: 15px;
     }
     
     .header {
-        top: 2%;
-        left: 0;
+        margin-top: 20px;
     }
     
     .quicknotebutton {
@@ -370,8 +456,7 @@ html {
     
     .settings-wrapper {
         bottom: 15%;
-        right: 50%;
-        transform: translateX(50%);
+        right: 5%;
     }
     
     .timercontrols {
@@ -385,78 +470,88 @@ html {
 }
 
 @media screen and (max-width: 480px) {
+    .youtube-player iframe {
+        height: 200px;
+    }
+    
     .timercontainer {
-        width: 70%;
-        height: auto;
-        padding: 20px;
-        top: 45%;
+        width: 90%;
+        padding: 20px 15px;
+    }
+    
+    .youtube-input-container input {
+        font-size: 14px;
+        padding: 12px 12px 12px 45px;
+    }
+    
+    .youtube-icon {
+        font-size: 20px;
+        left: 12px;
     }
     
     .quicknote-editor {
         max-width: 90%;
         bottom: 11%;
-        left :25%;
-        transform: translateX(-25%);    
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .quicknote-editor .ProseMirror {
         min-width: auto;
         width: 100%;
     }
-    .settings-wrapper{
+    
+    .settings-wrapper {
         bottom: 5%;
-        right: 15%;
+        right: 5%;
     }
-    .quicknotebutton{
+    
+    .quicknotebutton {
         bottom: 5%;
-        left:25%
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .settings-menu {
-        
-        right: -50%;
+    
+    .header h1 {
+        font-size: 1.3em;
     }
-    .header h1{
-        font-size: 1.5em;
-    }
-    .header p{
+    
+    .header p {
         font-size: 0.8em;
     }
 }
 
 @media screen and (max-height: 700px) {
     .header {
-        top: 5%;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .youtube-player iframe {
+        height: 280px;
     }
     
     .timercontainer {
-        top: 45%;
-        height: auto;
-        padding: 20px 15px;
+        padding: 15px;
     }
     
-    .quicknotebutton {
+    .quicknotebutton, .settings-wrapper {
         bottom: 3%;
-    }
-    
-    .settings-wrapper {
-        bottom: 3%;
-    }
-    
-    .quicknote-editor {
-        bottom: 15%;
     }
 }
 
 @media screen and (max-height: 600px) {
-    .header {
-        top: 2%;
+    .youtube-player iframe {
+        height: 220px;
     }
     
     .timercontainer {
         gap: 10px;
+        padding: 10px;
     }
     
     .timercontainer h1 {
         margin: 5px 0;
+        font-size: 1.3em;
     }
 }

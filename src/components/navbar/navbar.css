@@ -188,7 +188,7 @@ input:checked + .slider .icon {
     }
     .modetoggler{
         position: relative;
-        right:10%;
+        right:-45%;
     }
     .nav-links {
         display: none;

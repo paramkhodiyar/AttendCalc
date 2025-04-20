@@ -4,6 +4,7 @@ import StarterKit from '@tiptap/starter-kit';
 import { Color } from '@tiptap/extension-color';
 import { FaPlus } from "react-icons/fa6";
 import { IoSettings } from "react-icons/io5";
+import { FaYoutube } from "react-icons/fa";
 import "./pomodoro.css";
 
 function Pomodoro({ darkMode }) {
@@ -68,6 +69,7 @@ function Pomodoro({ darkMode }) {
         setIsRunning(false);
         setTimeLeft(breakTime);
     };
+    
     useEffect(() => {
         if (!settings) return;
 
@@ -95,24 +97,30 @@ function Pomodoro({ darkMode }) {
                 <div className={`header ${darkMode ? " dark-mode" : ""}`}>
                     <h1 className="title">Stay focused. Get things done.</h1>
                     <p>Your personal Pomodoro Timer for your focus sessions</p>
-                    {/* <input
-                    type="text"
-                    placeholder="Paste YouTube link here..."
-                    value={youtubeLink}
-                    onChange={(e) => {
-                        const url = e.target.value;
-                        setYoutubeLink(url);
-                        const id = extractVideoId(url);
-                        if (id) setVideoId(id);
-                    }}
-                /> */}
                 </div>
                 
-                {/* {videoId && (
+                <div className={`youtube-input-container ${darkMode ? "dark-mode" : ""}`}>
+                    <div className="youtube-input-wrapper">
+                        <FaYoutube className="youtube-icon" />
+                        <input
+                            type="text"
+                            placeholder="Paste YouTube link here to study along..."
+                            value={youtubeLink}
+                            onChange={(e) => {
+                                const url = e.target.value;
+                                setYoutubeLink(url);
+                                const id = extractVideoId(url);
+                                if (id) setVideoId(id);
+                            }}
+                        />
+                    </div>
+                </div>
+                
+                {videoId && (
                     <div className="youtube-player">
                         <iframe
-                            width="300%"
-                            height="300"
+                            width="80%"
+                            height="450"
                             src={`https://www.youtube.com/embed/${videoId}`}
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -120,8 +128,9 @@ function Pomodoro({ darkMode }) {
                             title="YouTube Video"
                         ></iframe>
                     </div>
-                )} */}
-                <div className={`timercontainer ${darkMode ? " dark-mode" : ""}`}>
+                )}
+                
+                <div className={`timercontainer ${videoId ? "with-video" : ""} ${darkMode ? " dark-mode" : ""}`}>
                     <div className={`button-group ${darkMode ? " dark-mode" : ""}`}>
                         <button onClick={handleShortBreak}>Short Break</button>
                     </div>
@@ -146,8 +155,6 @@ function Pomodoro({ darkMode }) {
                         <EditorContent editor={editor} />
                     </div>
                 )}
-
-
 
                 <div className={`settings-wrapper`}>
                     <div className={`settingsbutton ${darkMode ? "dark-mode" : ""}`}>
