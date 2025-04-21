@@ -91,6 +91,7 @@ body {
     z-index: 100;
     margin-top: 20px;
     margin-bottom: 20px;
+    height: 50vh;
 }
 
 .warning {
@@ -190,6 +191,11 @@ body {
         padding-bottom: 80px;
     }
 
+    .warningcontainer {
+        position: relative;
+        bottom: auto;
+    }
+    
     .home h1 {
         font-size: 1.6rem;
     }

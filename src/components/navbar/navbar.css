@@ -198,7 +198,7 @@ input:checked + .slider .icon {
         top: 160px;
         right: 120px;
         border-radius: 16px;
-        height: 20vh;
+        height: fit-content;
         bottom: 0;
         background-color: grey;
         width: 50%;
@@ -222,5 +222,6 @@ input:checked + .slider .icon {
     }
     .dark-mode .nav-links {
         background-color: rgba(0, 0, 0, 0.95);
+
     }
 }

@@ -473,27 +473,39 @@ html {
     .youtube-player iframe {
         height: 200px;
     }
-    
+    .youtube-input-container{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
     .timercontainer {
-        width: 90%;
+        width: 80%;
         padding: 20px 15px;
     }
-    
+    .youtube-input-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items:center ;
+    }
     .youtube-input-container input {
         font-size: 14px;
         padding: 12px 12px 12px 45px;
+        width: 70%;
+
     }
     
     .youtube-icon {
         font-size: 20px;
-        left: 12px;
+        left: 12%;
     }
     
     .quicknote-editor {
         max-width: 90%;
-        bottom: 11%;
-        left: 50%;
-        transform: translateX(-50%);
+        bottom: 14%;
+        left: 25%;
+     
     }
     
     .quicknote-editor .ProseMirror {
@@ -502,13 +514,13 @@ html {
     }
     
     .settings-wrapper {
-        bottom: 5%;
-        right: 5%;
+        bottom: -25%;
+        right: -35%;
     }
     
     .quicknotebutton {
-        bottom: 5%;
-        left: 50%;
+        bottom: -29.5%;
+        left: -10%;
         transform: translateX(-50%);
     }
     
