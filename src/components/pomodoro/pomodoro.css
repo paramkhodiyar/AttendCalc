@@ -331,8 +331,8 @@ html {
 }
 
 .quicknote-editor {
-    position: fixed;
-    bottom: calc(20% + 60px);
+    position: absolute;
+    bottom: -1%;
     left: 5%;
     max-width: 300px;
     display: flex;
